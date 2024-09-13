@@ -1,22 +1,13 @@
 public class PrintClass {
 
-    private final String miss = "miss";
-    private final String hit = "hit";
-    private final String cHit = "critical hit";
-    private final String cMiss = "critical miss";
-    private final String hp = "hp";
-    private final String atk = "attack";
-    private final String win = "win";
+    public void turnOrder(int turn, int ini){
+        System.out.printf("Turn %d \n\n Player %d", turn, ini);
+    }
 
-
-
-    public void print(int hit, int cHit, int dmg){
-        if (cHit == 0){
-            System.out.println(cMiss);
-        } else if (cHit == 1) {
-            System.out.println("hit for " + dmg);
-        }
-        System.out.println("Player 1 %s");
-        System.out.println("Player 2 %s");
+    public void printFight(int hit, int cHit, int dmg){
+        System.out.printf(" attack (hit %d crit %d)\nDeal %d damage", hit, cHit, dmg);
+    }
+    public void win (String name){
+        System.out.printf("%s", name);
     }
 }
