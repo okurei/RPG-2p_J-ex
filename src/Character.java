@@ -13,9 +13,6 @@ public class Character{
         this.name = name;
     }
 
-   /* public double getBaseAtk() {
-        return baseAtk;
-    }*/
 
     public int getHp() {
         return hp;
