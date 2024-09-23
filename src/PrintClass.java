@@ -5,8 +5,8 @@ public class PrintClass {
         System.out.printf("Turn %d\n", turn);
     }
 
-    public int printFight(String name,int hit, int cHit1, int cHit2){
-        int dmg = dmgL.endDmg(hit, cHit1, cHit2);
+    public int printFight(String name,int hit,int baseAtk, int cHit1, int cHit2){
+        int dmg = dmgL.endDmg(hit, baseAtk, cHit1, cHit2);
         System.out.printf("%s attack (hit %d crit %d, %d)\nDeal %d damage\n", name, hit, cHit1, cHit2, dmg);
         return dmg;
     }

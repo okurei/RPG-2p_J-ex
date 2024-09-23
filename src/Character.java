@@ -3,9 +3,9 @@ import java.util.Random;
 public class Character{
     private final String name;
     private int hp = 100;
-    private final double baseAtk = 10;
-    private int baseHit = 100;
-    private int cHit = 6;
+    private final int baseAtk = 10;
+    private final int baseHit = 101;
+    private final int cHit = 7;
 
     Random rdm = new Random();
 
@@ -23,15 +23,19 @@ public class Character{
         if(hp < 0){this.hp = 0;}
     }
 
+    public int getBaseAtk() {
+        return baseAtk;
+    }
+
     public String getName() {
         return name;
     }
 
     public int getBaseHit(){
-        return baseHit = rdm.nextInt(100)+1;
+        return rdm.nextInt(baseHit);
     }
 
     public int getCHit(){
-        return cHit = rdm.nextInt(6)+1;
+        return rdm.nextInt(cHit);
     }
 }

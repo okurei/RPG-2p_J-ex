@@ -14,12 +14,12 @@ public class Combat {
             printC.turnOrder(turn);
             turn++;
             if (ini == 1){
-                int dmg = printC.printFight(char1.getName(), char1.getBaseHit(), char1.getCHit(), char1.getCHit());
+                int dmg = printC.printFight(char1.getName(),char1.getBaseHit(), char1.getBaseAtk(), char1.getCHit(), char1.getCHit());
                 char2.setHp(dmg);
                 printC.printHp(char2.getName(), char2.getHp());
             }
             else {
-                int dmg = printC.printFight(char2.getName(), char2.getBaseHit(), char2.getCHit(), char2.getCHit());
+                int dmg = printC.printFight(char2.getName(),char2.getBaseHit(), char2.getBaseAtk(), char2.getCHit(), char2.getCHit());
                 char1.setHp(dmg);
                 printC.printHp(char1.getName(), char1.getHp());
 
