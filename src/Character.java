@@ -17,12 +17,13 @@ public class Character{
         return baseAtk;
     }*/
 
-    public double getHp() {
+    public int getHp() {
         return hp;
     }
 
     public void setHp(int dmg) {
         this.hp = hp - dmg;
+        if(hp < 0){this.hp = 0;}
     }
 
     public String getName() {
@@ -30,10 +31,10 @@ public class Character{
     }
 
     public int getBaseHit(){
-        return baseHit = rdm.nextInt(baseHit)+1;
+        return baseHit = rdm.nextInt(100)+1;
     }
 
     public int getCHit(){
-        return cHit = rdm.nextInt(cHit)+1;
+        return cHit = rdm.nextInt(6)+1;
     }
 }

@@ -13,6 +13,13 @@ public class Combat {
             if (turn == 1){
                 int dmg = printC.printFight(char1.getName(), char1.getBaseHit(), char1.getCHit(), char1.getCHit());
                 char2.setHp(dmg);
+                printC.printHp(char2.getName(), char2.getHp());
+            }
+            else {
+                int dmg = printC.printFight(char2.getName(), char2.getBaseHit(), char2.getCHit(), char2.getCHit());
+                char1.setHp(dmg);
+                printC.printHp(char1.getName(), char1.getHp());
+
             }
 
         }while(char1.getHp() > 0 && char2.getHp() > 0);
