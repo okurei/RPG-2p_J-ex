@@ -1,11 +1,14 @@
 public class PrintClass {
+    DamageLogic dmgL = new DamageLogic();
 
     public void turnOrder(int turn, int ini){
         System.out.printf("Turn %d \n\n Player %d", turn, ini);
     }
 
-    public void printFight(int hit, int cHit, int dmg){
-        System.out.printf(" attack (hit %d crit %d)\nDeal %d damage", hit, cHit, dmg);
+    public int printFight(String name,int hit, int cHit1, int cHit2){
+        int dmg = dmgL.endDmg(hit, cHit1, cHit2);
+        System.out.printf("%s attack (hit %d crit %d %d)\nDeal %d damage\n", name, hit, cHit1, cHit2, dmg);
+        return dmg;
     }
 
     public void win (String name){
