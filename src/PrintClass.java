@@ -1,8 +1,8 @@
 public class PrintClass {
     DamageLogic dmgL = new DamageLogic();
 
-    public void turnOrder(int turn, int ini){
-        System.out.printf("Turn %d \n\n Player %d", turn, ini);
+    public void turnOrder(int turn){
+        System.out.printf("Turn %d\n", turn);
     }
 
     public int printFight(String name,int hit, int cHit1, int cHit2){
@@ -12,10 +12,14 @@ public class PrintClass {
     }
 
     public void printHp(String name, int hp){
-        System.out.printf("%s %dhp\n\n", name, hp);
+        if (hp > 0) {
+            System.out.printf("%s %dhp\n\n", name, hp);
+        }else{
+            System.out.printf("%s is dead.\n\n", name);
+        }
     }
 
     public void win (String name){
-        System.out.printf("%s", name);
+        System.out.printf("%s Win!", name);
     }
 }

@@ -8,9 +8,12 @@ public class Combat {
     Random rdm = new Random();
 
     public void fight(){
+        int turn = 1;
         do{
-            int turn = rdm.nextInt(2)+1;
-            if (turn == 1){
+            int ini = rdm.nextInt(2)+1;
+            printC.turnOrder(turn);
+            turn++;
+            if (ini == 1){
                 int dmg = printC.printFight(char1.getName(), char1.getBaseHit(), char1.getCHit(), char1.getCHit());
                 char2.setHp(dmg);
                 printC.printHp(char2.getName(), char2.getHp());
@@ -21,9 +24,12 @@ public class Combat {
                 printC.printHp(char1.getName(), char1.getHp());
 
             }
-
         }while(char1.getHp() > 0 && char2.getHp() > 0);
+        if (char2.getHp() == 0) {
+            printC.win(char1.getName());
+        }
+        else {
+            printC.win(char2.getName());
+        }
     }
-
-
 }
