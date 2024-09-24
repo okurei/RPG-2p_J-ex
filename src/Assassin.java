@@ -10,7 +10,6 @@ public class Assassin extends Character{
     public int getHp() {
         return hp;
     }
-
     @Override
     public void setHp(int dmg) {
         this.hp = hp - dmg;
