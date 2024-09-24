@@ -31,10 +31,13 @@ public abstract class Character{
         return name;
     }
 
+    /**
+     * return a random number from 0 to baseHit -1 random */
     public int getBaseHit(){
         return rdm.nextInt(baseHit);
     }
-
+    /**
+     * return a random number from 0 to cHit -1 random */
     public int getCHit(){
         return rdm.nextInt(cHit);
     }
