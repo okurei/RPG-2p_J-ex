@@ -3,8 +3,8 @@ import java.util.Random;
 public class Combat {
 
     PrintClass printC = new PrintClass();
-    Character char1 = new Character("Player 1");
-    Character char2 = new Character("Player 2");
+    Warrior char1 = new Warrior("Player 1");
+    Assassin char2 = new Assassin("Player 2");
     Random rdm = new Random();
 
     public void fight(){

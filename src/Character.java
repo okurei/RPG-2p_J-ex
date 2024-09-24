@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Character{
+public abstract class Character{
     private final String name;
     private int hp = 100;
     private final int baseAtk = 10;
