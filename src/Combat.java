@@ -12,11 +12,11 @@ public class Combat {
     public void fight(){
         int turn = 1;
         do{
-            int ini = rdm.nextInt(2)+1; /* set first to attack each turn*/
+            int initiative = rdm.nextInt(2)+1; /* set first to attack each turn*/
             printC.turnOrder(turn);
             turn++;
             /*if statement for the initiative*/
-            if (ini == 1){
+            if (initiative == 1){
                 int dmg = printC.printFight(char1.getName(),char1.getBaseHit(), char1.getBaseAtk(), char1.getCHit(), char1.getCHit());
                 char2.setHp(dmg);
                 printC.printHp(char2.getName(), char2.getHp());
