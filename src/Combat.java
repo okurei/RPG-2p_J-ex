@@ -16,23 +16,18 @@ public class Combat {
             printC.turnOrder(turn);
             turn++;
             /*if statement for the initiative*/
-            if (initiative == 1){
-                int dmg = printC.printFight(char1.getName(),char1.getBaseHit(), char1.getBaseAtk(), char1.getCHit(), char1.getCHit());
-                char2.setHp(dmg);
-                printC.printHp(char2.getName(), char2.getHp());
-            }
-            else {
-                int dmg = printC.printFight(char2.getName(),char2.getBaseHit(), char2.getBaseAtk(), char2.getCHit(), char2.getCHit());
-                char1.setHp(dmg);
-                printC.printHp(char1.getName(), char1.getHp());
+            handleFight(initiative == 1 ? char1 : char2, initiative == 1 ? char2 : char1);
 
-            }
         }while(char1.getHp() > 0 && char2.getHp() > 0);/*do while both the player have hp above 0 */
-        if (char2.getHp() == 0) {
-            printC.win(char1.getName());
-        }
-        else {
-            printC.win(char2.getName());
-        }
+
+        printC.win(char2.getHp() == 0 ? char1.getName(): char2.getName());
+    }
+
+
+    private void handleFight(Character character1, Character character2){
+        int dmg = printC.printFight(character1);
+        character2.setHp(dmg);
+        printC.printHp(character2.getName(), character2.getHp());
+
     }
 }
